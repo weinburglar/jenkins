@@ -1,11 +1,10 @@
 //Jenkinsfile (Declarative Pipeline)
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'ruby:3.2.2-alpine3.18' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'ruby --version'
+                bat 'set'
             }
         }
     }
